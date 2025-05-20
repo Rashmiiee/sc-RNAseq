@@ -1,23 +1,21 @@
-#🧬 sc-RNAseq Analysis of Human Pancreatic Islets
-This repository contains a single-cell RNA-seq (scRNA-seq) analysis pipeline applied to human pancreatic islets using publicly available data (GSE84133). The analysis includes comprehensive preprocessing, quality control, normalization, dimensionality reduction, clustering, batch correction, and cell type annotation.
+# 🧬 sc-RNAseq Analysis of Human Pancreatic Islets
 
-#Highlights
-Dataset: GSE84133 (10X Genomics platform)
+This repository contains a single-cell RNA-seq (scRNA-seq) analysis pipeline applied to human pancreatic islets using publicly available data (GSE84133). The analysis includes preprocessing, quality control, normalization, dimensionality reduction, clustering, batch correction, and cell type annotation.
 
-QC & Filtering: Performed on mitochondrial content, gene/cell thresholds
+## 🔹 Highlights
 
-Normalization & Log-transform: Counts per cell normalized to 10,000; log1p applied
+- **Dataset**: GSE84133 (10X Genomics platform)
+- **QC & Filtering**: On mitochondrial content, gene/cell thresholds
+- **Normalization & Log-transform**: Counts normalized to 10,000 per cell and log1p-transformed
+- **Dimensionality Reduction**: PCA and UMAP
+- **Batch Correction**: Harmony
+- **Clustering**: Leiden algorithm
+- **Annotation**: Canonical pancreas markers
 
-Dimensionality Reduction: PCA and UMAP for visualization
+## 🔧 Tools
 
-Batch Correction: Performed using Harmony
+- `Scanpy`, `AnnData`, `Pandas`, `HarmonyPy`
+- `Plotly`, `Seaborn`
+- Data fetched via `wget` from [GEO](https://www.ncbi.nlm.nih.gov/geo/)
 
-Clustering: Leiden algorithm used to identify clusters
-
-Annotation: Based on canonical pancreas marker genes
-
-#Tools
-Scanpy, AnnData, Pandas, HarmonyPy, Plotly, Seaborn
-
-Source data fetched via wget from GEO
 
