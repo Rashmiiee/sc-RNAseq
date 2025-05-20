@@ -1,32 +1,23 @@
 🧬 sc-RNAseq Analysis of Human Pancreatic Islets
- 
+This repository contains a single-cell RNA-seq (scRNA-seq) analysis pipeline applied to human pancreatic islets using publicly available data (GSE84133). The analysis includes comprehensive preprocessing, quality control, normalization, dimensionality reduction, clustering, batch correction, and cell type annotation.
 
-A reproducible single-cell RNA-seq (scRNA-seq) analysis pipeline applied to human pancreatic islet cells. This pipeline performs end-to-end processing from raw count matrices to batch-corrected, annotated cellular clusters, using standard tools like Scanpy and Harmony.
+🚀 Highlights
+Dataset: GSE84133 (10X Genomics platform)
 
-📊 Overview
-Dataset: GSE84133 (10X Genomics scRNA-seq of human pancreatic islets)
+QC & Filtering: Performed on mitochondrial content, gene/cell thresholds
 
-Sample count: 4 donors (GSM2230757–60)
+Normalization & Log-transform: Counts per cell normalized to 10,000; log1p applied
 
-Total cells after QC: 8,499
+Dimensionality Reduction: PCA and UMAP for visualization
 
-Goal: Clean, normalize, and cluster cells into biologically meaningful populations with robust visualization
+Batch Correction: Performed using Harmony
 
-🛠️ Pipeline Summary
-Step	Tool(s)
-Data download	wget
-Quality control	Scanpy
-Normalization & log1p	Scanpy
-Dimensionality reduction	PCA, UMAP
-Batch correction	Harmony
-Clustering	Leiden algorithm
-Cell type annotation	Canonical markers
+Clustering: Leiden algorithm used to identify clusters
 
-🖥️ Technologies Used
-🐍 Python (≥3.8)
+Annotation: Based on canonical pancreas marker genes
 
-🧪 Scanpy
+🔧 Key Tools
+Scanpy, AnnData, Pandas, HarmonyPy, Plotly, Seaborn
 
-📊 Harmony
+Source data fetched via wget from GEO
 
-📈 Plotly & Seaborn for interactive and static visualization
